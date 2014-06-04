@@ -1,0 +1,87 @@
+<!docType html>
+<html>
+	<head>
+		<title> André Stadelmann </title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css' />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script type="text/javascript">
+
+			function onLoad()
+			{
+				$(window).resize(onResize);
+				onResize();	
+			}
+
+			function onResize()
+			{
+				if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+ 					$("body").css({"font-size": "0.75vw"});
+				}
+				else {
+				$("body").css({"font-size": "1.2vw"});
+				}
+				$("footer").css({position: "absolute", top: $(document).height() - $("footer").height(), display: "block"});
+			}
+
+			function toggleProjects(content, id)
+			{
+
+				$(content).toggle();
+				if($(content).css("display") == "none")
+				{
+					$(id).css({"border-radius" : "0.2em"});
+				}
+				else
+				{
+					$(id).css({"border-radius" : "0.2em 0.2em 0 0"});
+				}
+				onResize();	
+			}
+
+		</script>
+	</head>
+	
+<body id="startpage" onLoad="onLoad();">
+
+	<header>
+		<nav id="nav">
+			<ul>
+            		<img id="logo" src="images/logo.png"/>
+					<li> <a href="index.html">Home</a> </li>
+					<li> <a class="thispage" href="projects.html">My projects</a> </li>
+					<li> <a href="about.html">About</a> </li>
+					<li> <a href="contact.html">Contact</a> </li>
+			</ul>
+		</nav>
+	</header>
+		
+	<div id="container">
+		<div id="projectbox">
+			<div class="projecthead">
+				<button id="testid1" class="projectbutton" id="project1" onclick="toggleProjects('#content1', '#testid1');"> Title </button>
+			</div>
+			<div class="projectcontent" id="content1">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elit ante, mollis nec laoreet nec, cursus eu magna. Maecenas tristique dui vulputate orci lacinia tempus. Proin at ligula blandit lectus volutpat blandit. Sed tempus odio a nibh tristique vehicula. Nunc fermentum quis mauris at convallis. Ut viverra magna sed tellus molestie, vel tempor metus mollis. Curabitur faucibus metus nec tortor rutrum vestibulum ac sed erat. Integer eget risus sed nisi adipiscing mattis. Suspendisse tristique at massa eget tincidunt. Aliquam tortor magna, euismod sit amet massa quis, eleifend venenatis dolor. Nulla et ornare metus. Maecenas sodales lobortis metus, a scelerisque tortor lobortis sed.</p>
+				<img id='cat' src="images/test.jpg"></img>
+			</div>
+		</div>
+		
+	</div>	
+		
+	<footer>
+		<center>
+		<div id="div1">
+            <a id="twitter" href="https://twitter.com/AndrStadelmann" target="_blank"> </a>
+			<a id="jimbutton" href="http://www.twitter.com" target="_blank"> </a>
+			<a id="facebook" href="http://www.Facebook.com/knasandre?ref=tn_tnmn" target="_blank"> </a>
+		</div>
+		<div id= "copyright"> Copyright &copy; André Stadelmann </div>
+		<center>
+	</footer>
+		
+</body>
+	
+	
+</html>

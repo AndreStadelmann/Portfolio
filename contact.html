@@ -1,0 +1,91 @@
+<!docType html>
+<html>
+	<head>
+		<title> André Stadelmann </title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css' />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script type="text/javascript">
+
+			function onLoad()
+			{
+				$(window).resize(onResize);
+				onResize();
+			}
+
+			function onResize()
+			{
+				if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+ 					$("body").css({"font-size": "0.75vw"});
+				}
+				else {
+				$("body").css({"font-size": "1.2vw"});
+				}
+				$("footer").css({position: "absolute", top: $(document).height() - $("footer").height(), display: "block"});
+			}
+
+		</script>
+	</head>
+	
+<body id="startpage" onLoad="onLoad();">
+
+	<header>
+		<nav id="nav">
+			<ul>
+            		<img id="logo" src="images/logo.png"/>
+					<li> <a href="index.html">Home</a> </li>
+					<li> <a href="projects.html">My projects</a> </li>
+					<li> <a href="about.html">About</a> </li>
+					<li> <a class="thispage" href="contact.html">Contact</a> </li>
+			</ul>
+		</nav>
+	</header>
+		
+	<div id="container">
+		<div id="aboutbox">
+			<div id="contactbox">
+				<form method="post">
+					<h1> Contact </h1>
+
+					<p>
+						<label for="name"> Name: </label>
+						<input name="name" id="name"> </input>
+					</p>
+					<p>
+						<label id="email" for="email"> Email: </label>
+						<input name="name" id="name"> </input>
+					</p>
+					<p>
+						<label for="message"> Message: </label>
+						<textarea name="message"></textarea>
+					</p>
+					<p>
+						<input id="submit" type="submit" value="Send">
+					</p>
+				</form>
+			</div>
+			<div id="profile">
+				<p><h2>Adress:</h2></p>
+				<p>Åsakvarnväg 13 </p> <p>43955 Åsa, Sweden</p>
+				<p><h2>Phone:</h2></p>
+				<p>(+46)768 - 93 34 11</p>
+			</div>
+		</div>
+	</div>	
+		
+	<footer>
+		<center>
+		<div id="div1">
+            <a id="twitter" href="https://twitter.com/AndrStadelmann" target="_blank"> </a>
+			<a id="jimbutton" href="http://www.twitter.com" target="_blank"> </a>
+			<a id="facebook" href="http://www.Facebook.com/knasandre?ref=tn_tnmn" target="_blank"> </a>
+		</div>
+		<div id= "copyright"> Copyright &copy; André Stadelmann </div>
+		<center>
+	</footer>
+		
+</body>
+	
+	
+</html>
