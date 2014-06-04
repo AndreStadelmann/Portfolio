@@ -272,6 +272,10 @@ footer > a {
 	outline: 0;
 }
 
+.projectbutton:hover {
+	cursor: pointer;
+}
+
 #cat {
 	width: 40em;
 }
